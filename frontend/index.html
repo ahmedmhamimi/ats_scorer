@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -98,17 +98,19 @@
   <!-- NAVBAR -->
   <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-2">
+      <a href="/" class="flex items-center gap-2 hover:opacity-90 transition-opacity">
         <div class="w-8 h-8 bg-sky-600 rounded-lg flex items-center justify-center">
           <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
           </svg>
         </div>
         <span class="font-bold text-lg text-gray-900">ATS<span class="text-sky-600">Scorer</span></span>
-      </div>
-      <div class="flex items-center gap-4 text-sm text-gray-500">
-        <span class="hidden sm:inline">Free · No signup · Instant results</span>
-        <a href="#how-it-works" class="text-sky-600 hover:underline">How it works</a>
+      </a>
+      <div class="flex items-center gap-6 text-sm font-medium text-gray-600">
+        <a href="/" class="hover:text-sky-600 hidden sm:inline">Home</a>
+        <a href="/about" class="hover:text-sky-600">About</a>
+        <a href="/blog" class="hover:text-sky-600">Blog</a>
+        <a href="#how-it-works" class="hover:text-sky-600">How it works</a>
       </div>
     </div>
   </nav>
@@ -389,19 +391,84 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-white border-t border-gray-100 py-8">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-      <div class="flex items-center gap-2">
-        <div class="w-6 h-6 bg-sky-600 rounded flex items-center justify-center">
-          <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
+  <!-- SEO CONTENT SECTION -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-16 text-gray-700">
+    <div class="prose prose-sky max-w-none">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">Master Your Job Search with the Best ATS Scorer</h2>
+      <p class="mb-6 leading-relaxed">
+        Did you know that over 75% of resumes are rejected by an <strong>Applicant Tracking System (ATS)</strong> before they ever reach human eyes? Navigating the modern job market requires more than just a great background—it requires an <strong>ATS friendly resume</strong>. That's where our <a href="/" class="text-sky-600 underline">free ATS scorer</a> comes into play. By simulating exactly how these parsing algorithms analyze documents, we give you the actionable feedback you need to ensure your resume gets properly scored and delivered to hiring managers.
+      </p>
+      
+      <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">What is an Applicant Tracking System (ATS)?</h3>
+      <p class="mb-6 leading-relaxed">
+        An <strong>Applicant Tracking System</strong> is software used by employers to collect, sort, scan, and rank job applications. Many popular platforms like Workday, Taleo, Greenhouse, and Lever utilize parsing technology that strips resumes of formatting and searches for text content, headings, and keywords. If your resume employs complex formatting—such as tables, multi-columns, graphics, or unusual fonts—the ATS might fail to extract vital information, resulting in an automatic rejection or a poor <strong>ATS score</strong>. Learn more about beating these systems on our <a href="/blog" class="text-sky-600 underline">blog</a>.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 my-10">
+        <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+          <h4 class="font-bold text-lg text-gray-900 mb-2">Why Use Our ATS Resume Checker?</h4>
+          <ul class="list-disc pl-5 space-y-2 text-sm">
+            <li><strong>Instant Scoring:</strong> See your results in seconds without creating an account.</li>
+            <li><strong>Deep Formatting Analysis:</strong> Discover hidden parser errors.</li>
+            <li><strong>Data Privacy:</strong> All processing is done securely without saving your files.</li>
+            <li><strong>Detailed Suggestions:</strong> Get straightforward tips to fix layout and text extraction issues.</li>
+          </ul>
         </div>
-        <span class="font-semibold text-gray-700 text-sm">ATSScorer</span>
+        <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+          <h4 class="font-bold text-lg text-gray-900 mb-2">Top ATS Best Practices</h4>
+          <ul class="list-disc pl-5 space-y-2 text-sm">
+            <li>Stick to standard fonts (Arial, Calibri, Times New Roman).</li>
+            <li>Use explicit headings (Experience, Education, Skills).</li>
+            <li>Avoid tables, headers/footers, and text boxes.</li>
+            <li>Save and upload files in standard formats (PDF or DOCX).</li>
+          </ul>
+        </div>
       </div>
-      <p class="text-gray-400 text-xs text-center">Free ATS resume checker · No account needed · Files never stored</p>
-      <p class="text-gray-300 text-xs">Built with FastAPI + Tailwind</p>
+
+      <h3 class="text-2xl font-bold text-gray-900 mb-4">How to Improve Your ATS Score</h3>
+      <p class="leading-relaxed mb-6">
+        Scoring well in our <strong>ATS test</strong> means understanding that simplicity is key. Ensure your contact information is at the very top of the document without residing in a document header/footer. Keep margins clean and bullet points standard. Read up on our comprehensive guide on <a href="/blog/what-is-ats-resume-checker" class="text-sky-600 underline">What is an ATS Resume Checker</a> to get deeper insights into crafting the perfect CV.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 bg-sky-600 rounded-lg flex items-center justify-center">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <span class="font-bold text-lg text-white">ATS<span class="text-sky-500">Scorer</span></span>
+        </div>
+        <p class="text-sm text-gray-400 mb-4 max-w-xs">
+          The ultimate free ATS resume compatibility scanner. Upload your PDF or DOCX file instantly and see what the robots see.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-xs">Resources</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/" class="hover:text-sky-400 transition">Free ATS Scanner</a></li>
+          <li><a href="/about" class="hover:text-sky-400 transition">About Us</a></li>
+          <li><a href="/blog" class="hover:text-sky-400 transition">Career Blog</a></li>
+          <li><a href="/blog/how-to-beat-ats" class="hover:text-sky-400 transition">How to Beat Applicant Tracking Systems</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-white mb-4 uppercase tracking-wider text-xs">Legal & Contact</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-sky-400 transition">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-sky-400 transition">Terms of Service</a></li>
+          <li><a href="mailto:support@atsscorer.com" class="hover:text-sky-400 transition">Contact Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 mt-8 border-t border-gray-800 text-xs text-center text-gray-500 flex flex-col md:flex-row justify-between items-center gap-2">
+      <p>&copy; 2026 ATS Scorer. All rights reserved.</p>
+      <p>Built for a faster, smarter job search.</p>
     </div>
   </footer>
 

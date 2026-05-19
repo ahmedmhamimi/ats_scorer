@@ -50,6 +50,18 @@ ALLOWED_TYPES = {
 async def index():
     return FileResponse(os.path.join(FRONTEND_DIR, "index.html"))
 
+@app.get("/about")
+async def about():
+    return FileResponse(os.path.join(FRONTEND_DIR, "about.html"))
+
+@app.get("/blog")
+async def blog():
+    return FileResponse(os.path.join(FRONTEND_DIR, "blog.html"))
+
+@app.get("/blog/{slug}")
+async def blog_post(slug: str):
+    return FileResponse(os.path.join(FRONTEND_DIR, "blog", f"{slug}.html"))
+
 
 @app.get("/api/health")
 async def health():
