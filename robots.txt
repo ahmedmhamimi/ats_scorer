@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+Allow: /static/
+Disallow: /api/
+Disallow: /docs
+
+Sitemap: https://ats.vamimi.com/sitemap.xml
+
+# Popular search engines
+User-agent: Googlebot
+Allow: /
+Allow: /static/
+Allow: /blog/
+Allow: /about
+
+User-agent: Bingbot
+Allow: /
+Allow: /static/
+Allow: /blog/
+
+# Crawl delay (optional)
+Crawl-delay: 1

@@ -63,6 +63,16 @@ async def blog_post(slug: str):
     return FileResponse(os.path.join(FRONTEND_DIR, "blog", f"{slug}.html"))
 
 
+@app.get("/robots.txt")
+async def robots():
+    return FileResponse(os.path.join(os.path.dirname(__file__), "..", "robots.txt"))
+
+
+@app.get("/sitemap.xml")
+async def sitemap():
+    return FileResponse(os.path.join(os.path.dirname(__file__), "..", "sitemap.xml"))
+
+
 @app.get("/api/health")
 async def health():
     return {"status": "ok", "version": "1.0.0"}
